@@ -1,8 +1,8 @@
 import json
 
-def lambda_handler(event, context):
+def vishnu_handler(event, context):
     # TODO implement
     return {
         'statusCode': 200,
-        'body': json.dumps('Hi from Lambda!')
+        'body': json.dumps('Hello from Lambda!')
     }
