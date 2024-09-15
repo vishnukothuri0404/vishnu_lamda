@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "my build start .. for lambda zip .."
+      - zip -r  mydeploy.zip vishnu_functionfile.py 
+
+  post_build:
+    commands:
+      - echo "deploy lambda zip function .."
+      - aws  lambda  update-function-code  --function-name vishnuFunction --zip-file fileb://mydeploy.zip
